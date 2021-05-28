@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Travel pass</ion-title>
+    <img class="logout-button" slot="end" src="/assets/logout.png" (click)="logout()">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="verifydetails"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Generate QR Code for the APEC Partner Hospitals / Clinics to scan -->
+  <ion-card *ngIf="createdCode">
+    <p class="partnertext">Provide this QR Code to the <br>APEC Partner Hospital / Clinic</p>
+    <ion-card-content>
+      <ngx-qrcode class="qrcode" width="350" [value]="createdCode"></ngx-qrcode>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Load the gif -->
+  <img class="medical-gif" src="/assets/doctors.gif" />
+
+  <h1 class="header">Medical travel pass</h1>
+  <p class="subtitle">Please select your registered medical travel pass</p>
+
+  <!-- Button to generate QR Code for the APEC partner hospitals/clinics -->
+  <ion-card (click)="providerQRCode()">
+    <ion-card-header>
+      <h2 class="apecpartner">APEC Partner <br> Hospital / Clinic</h2>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>

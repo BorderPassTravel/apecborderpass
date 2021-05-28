@@ -1,6 +1,5 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -16,12 +15,98 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+ion-content {
+  font-family: "futura-regular" !important;
+  --padding-bottom: 10px;
+  --padding-end: 10px;
+  --padding-start: 20px;
+  --padding-top: 20px;
+}
+
+.header {
+  text-align: center;
+  font-family: "futura-heavy" !important;
+  font-size: 18px;
+}
+
+.title {
+  font-family: "futura-heavy" !important;
+}
+
+.subtitle {
+  text-align: center !important;
+}
+
+.signup-button {
+  width: 100%;
+  font-size: 15px;
+}
+
+.login-button {
+  font-family: "futura-heavy" !important;
+  --background: #f9b801;
+  width: 100%;
+  font-weight: bold;
+}
+
+.logout-button {
+  margin-right: 10px;
+  width: 19px;
+  height: 19px;
+}
+
+.qrcode-button {
+  width: 23px;
+  height: 23px;
+  margin-right: 15px;
+}
+
+.captureImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qrcode {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250;
+}
+
+.clinic-button {
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+}
+
+.partnertext {
+  font-family: "futura-heavy" !important;
+  text-align: center !important;
+  color: #000 !important;
+  font-size: 16px !important;
+}
+
+.bordercontrol {
+  font-family: "futura-heavy" !important;
+  --background: #3628b1;
+
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.verifyagain {
+  font-family: "futura-heavy" !important;
+  --background: #f9b801;
+  width: 100%;
+  font-weight: bold;
 }

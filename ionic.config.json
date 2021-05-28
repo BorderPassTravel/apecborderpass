@@ -1,5 +1,7 @@
 {
   "name": "apecborderpass",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

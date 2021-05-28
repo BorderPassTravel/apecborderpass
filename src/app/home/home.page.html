@@ -1,20 +1,66 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title class="title">Ready to travel?</ion-title>
+    <img class="clinic-button" slot="end" src="/assets/clinicicon.png" (click)="clinic()">
+    <img class="qrcode-button" slot="end" src="/assets/airplane.png" (click)="createCode()">
+    <img class="logout-button" slot="end" src="/assets/logout.png" (click)="logout()">
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-card *ngIf="createdCode">
+    <p class="partnertext">Provide this QR Code to the officer</p>
+    <ngx-qrcode class="qrcode" width="350" [value]="createdCode"></ngx-qrcode>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col>
+        <img src="/assets/travel-1.gif" alt="" />
+      </ion-col>
+
+      <ion-col>
+        <img src="/assets/travel-2.gif" alt="" />
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- If the user has not been verified - display the verification form -->
+  <div *ngIf="ppnum == null || ppnum == '' || nopassport == true">
+    <h1 class="header">Let's verify your biometrics</h1>
+    <p class="subtitle">Take a picture of yourself and your passport</p>
+
+    <ion-card>
+      <ion-img class="captureImage" [src]="selfieimgsrc"></ion-img>
+      <ion-card-header>
+        <ion-button class="signup-button" size="small" fill="outline" (click)="takeSelfie()">Take a selfie
+          <ion-icon slot="start" name="camera-outline"></ion-icon>
+        </ion-button>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-img class="captureImage" [src]="ppimgsrc"></ion-img>
+      <ion-card-header>
+        <ion-button class="signup-button" size="small" fill="outline" (click)="takePassport()">Scan your passport
+          <ion-icon slot="start" name="barcode-outline"></ion-icon>
+        </ion-button>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-button size="medium" class="login-button" (click)="readFile()">Submit biometrics</ion-button>
   </div>
+
+  <!-- If the user has been verified - display the Border Control QRCode for the officer / Verify with new passport -->
+  <div *ngIf="ppnum != null && ppnum != '' && verifyagain">
+    <ion-button [hidden]="nopassport == true" size="medium" class="bordercontrol" (click)="createCode()">Generate border
+      control QR code</ion-button>
+    <ion-button [hidden]="nopassport == true" size="medium" class="verifyagain" (click)="verifyagain()">Add new passport
+    </ion-button>
+  </div>
+
 </ion-content>

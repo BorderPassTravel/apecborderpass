@@ -8,8 +8,32 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'forgotpassword',
+    loadChildren: () => import('./forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
+  },
+  {
+    path: 'travelpass',
+    loadChildren: () => import('./travelpass/travelpass.module').then( m => m.TravelpassPageModule)
+  },
+  {
+    path: 'medicalreport',
+    loadChildren: () => import('./medicalreport/medicalreport.module').then( m => m.MedicalreportPageModule)
+  },
+  {
+    path: 'verifydetails',
+    loadChildren: () => import('./verifydetails/verifydetails.module').then( m => m.VerifydetailsPageModule)
   },
 ];
 

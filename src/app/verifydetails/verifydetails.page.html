@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Verify details</ion-title>
+    <img class="logout-button" slot="end" src="/assets/logout.png" (click)="logout()">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="infopad">
+    <ion-card-content>Please verify your information. If any of the information is incorrect, edit the relevant field
+      and click save</ion-card-content>
+  </ion-card>
+
+
+  <div class="form-input">
+    <ion-item>
+      <ion-label position="stacked">Fullname as per passport</ion-label>
+      <ion-input type="text" [(ngModel)]="ppname"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-input">
+    <ion-item>
+      <ion-label position="stacked">Country</ion-label>
+      <ion-input type="text" [(ngModel)]="country"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-input">
+    <ion-item>
+      <ion-label position="stacked">Date of birth</ion-label>
+      <ion-input type="text" [(ngModel)]="dob"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-input">
+    <ion-item>
+      <ion-label position="stacked">Passport number</ion-label>
+      <ion-input type="text" [(ngModel)]="documentNumber"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="form-input">
+    <p class="genderlabel"> Gender</p>
+    <ion-select placeholder="Please select one" [(ngModel)]="sex">
+      <ion-select-option value="Female">Female</ion-select-option>
+      <ion-select-option value="Male">Male</ion-select-option>
+    </ion-select>
+  </div>
+
+  <ion-button size="medium" class="login-button" (click)="confirmDetails()">Yes! The details are correct</ion-button>
+
+</ion-content>

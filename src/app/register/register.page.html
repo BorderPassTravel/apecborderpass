@@ -1,0 +1,63 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="login-section ion-padding">
+
+    <div class="heading ion-padding">
+      <h1>Create an account</h1>
+      <p>Secure & Fast travel</p>
+    </div>
+
+    <div class="login-form ion-padding">
+
+
+ <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">FULL NAME</ion-label>
+          <ion-input type="text" [(ngModel)]="fullname"></ion-input>
+        </ion-item> 
+      </div>
+
+       <!-- <div class="form-input">
+        <ion-icon name="barcode-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">PASSPORT NUMBER</ion-label>
+          <ion-input type="text" [(ngModel)]="ppnumber"></ion-input>
+        </ion-item>
+      </div> -->
+      
+      <div class="form-input">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">EMAIL</ion-label>
+          <ion-input type="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </div>
+
+       <div class="form-input">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-item>
+          <ion-label position="floating">PASSWORD</ion-label>
+          <ion-input type="password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+      </div>
+</div>
+
+<div class="action-button ion-padding">
+<ion-button size="large" class="login-button" (click)="register()">Register</ion-button>
+<p>Already have an account? Log in <span routerLink="/login">here</span></p>
+<!-- <ion-button class="signup-button" size="large" fill="outline">Sign Up</ion-button> -->
+</div>
+
+</div>
+
+</ion-content>
+
+<!-- <ion-button (click)="homePage()">Home</ion-button> -->
+
+

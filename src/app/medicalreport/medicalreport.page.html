@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Medical card</ion-title>
+    <img class="logout-button" slot="end" src="/assets/logout.png" (click)="logout()">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="travelpass"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p class="userName">{{newuserfullname}}</p>  
+
+  <p class="passportNumber">{{newppnumber}}</p>
+
+  <!-- <p class="providercard">Medical card provider: {{providerName}}</p> -->
+
+  <ion-card *ngIf="createdCode">
+    <ngx-qrcode class="qrcode" width="350"[value]="createdCode"></ngx-qrcode>
+  </ion-card>
+
+  <!-- COVID-19 SWAB TEST -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="header">COVID-19 Swab Test</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="subtitle"> Tuesday, 11 May 2021</p>
+      <p class="subtitle" style="color: brown;">COVID-19 RT-PCR Testing Service</p>
+      <ion-icon class="checkpass" name="checkmark-circle"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- COVID-19 VACCINE -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="header">COVID-19 Vaccination</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="subtitle"> Monday, 24 May 2021</p>
+      <p class="subtitle" style="color: brown;">Pfizer–BioNTech COVID-19 vaccine</p>
+      <ion-icon class="checkpass" name="checkmark-circle"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- ANTIBODY TEST -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="header">COVID-19 Antibody Test</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p class="subtitle"> Thursday, 27 May 2021</p>
+      <ion-icon class="checkpass" name="checkmark-circle"></ion-icon> 
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button size="large" class="login-button" (click)="createCode()">Generate QR Code</ion-button>
+
+  
+
+</ion-content> 

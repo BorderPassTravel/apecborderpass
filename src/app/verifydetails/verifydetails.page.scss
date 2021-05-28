@@ -1,0 +1,82 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content {
+  font-family: "futura-regular" !important;
+  --padding-bottom: 10px;
+  --padding-end: 10px;
+  --padding-start: 20px;
+  --padding-top: 20px;
+}
+
+.header {
+  text-align: center;
+  font-family: "futura-heavy" !important;
+  font-size: 18px;
+}
+
+.title {
+  font-family: "futura-heavy" !important;
+}
+
+.subtitle {
+  text-align: center !important;
+}
+
+.signup-button {
+  width: 100%;
+  font-size: 15px;
+}
+
+.login-button {
+  font-family: "futura-heavy" !important;
+  --background: #f9b801;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.logout-button {
+  margin-right: 10px;
+  width: 19px;
+  height: 19px;
+}
+
+.captureImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infopad {
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-family: "futura-regular" !important;
+  color: #000;
+}
+
+.genderlabel {
+  margin-left: 20px !important;
+}
